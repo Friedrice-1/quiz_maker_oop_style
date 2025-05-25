@@ -10,7 +10,9 @@ def menu():
         mode = input("Select mode: [1] Create Quiz [2] Take Quiz [Q] Quit: ").strip().upper()
 # Load question manager
         if mode == "1":
-            print("Create quiz")
+            question_manager = QuestionManager()
+            question_manager.add_question()
+            question_manager.save_to_file()
 # Load quiz loader
         elif mode == "2":
             print("Take the quiz")

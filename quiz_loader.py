@@ -32,4 +32,23 @@ class QuizLoader:
                 index += 1
 # Start the quiz with user interaction
     def start_quiz(self):
-        
+        random.shuffle(self.questions)
+        score = 0
+
+        for question in self.questions:
+            print(f"\n{question['question']}")
+            for key, value in question["choices"].items():
+                print(f"  {key}: {value}")
+            while True:
+                user_answer = input("Your answer (A/B/C/D): ").strip().upper()
+                if user_answer in ['A', 'B', 'C', 'D']:
+                    break
+                else:
+                    print("Invalid choice. Please enter A, B, C, or D.")
+            if user_answer == question["correct"]:
+                print("Correct!")
+                score += 1
+            else:
+                print(f"Wrong. The correct answer was {question['correct']}.")
+
+        print(f"\nYou got {score} out of {len(self.questions)} correct.")

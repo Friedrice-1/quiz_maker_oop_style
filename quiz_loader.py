@@ -1,3 +1,4 @@
+import random
 # Create a class for quiz loader
 class QuizLoader:
 # Initialize the class with filename and an empty list for questions
@@ -31,3 +32,4 @@ class QuizLoader:
                 index += 1
 # Start the quiz with user interaction
     def start_quiz(self):
+        

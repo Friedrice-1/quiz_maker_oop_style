@@ -15,7 +15,9 @@ def menu():
             question_manager.save_to_file()
 # Load quiz loader
         elif mode == "2":
-            print("Take the quiz")
+            quiz_loader = QuizLoader()
+            quiz_loader.load_questions()
+            quiz_loader.start_quiz()
         elif mode == "Q":
             print("Goodbye")
             break

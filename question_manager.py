@@ -45,3 +45,11 @@ class QuestionManager:
                 break
 # Save created questions to a text file
     def save_to_file(self, filename="quiz_data.txt"):
+        with open(filename, "w") as file:
+            for question in self.questions:
+                file.write(f"Question: {question['question']}\n")
+                for key, value in question["choices"].items():
+                    file.write(f"  {key}: {value}\n")
+                file.write(f"Correct Answer: {question['correct']}\n")
+                file.write("-" * 40 + "\n")
+        print(f"All questions saved to '{filename}' in the same directory.")

@@ -19,7 +19,7 @@ class QuestionManager:
             if not all([choice_a, choice_b, choice_c, choice_d]):
                 print("All choices must be filled. Please try again.")
                 continue
-
+        # Create a dictionary for the question and add it to the list
             while True:
                 correct_answer = input("Please enter the correct answer [A/B/C/D]: ").upper()
                 if correct_answer in ['A', 'B', 'C', 'D']:
@@ -43,5 +43,4 @@ class QuestionManager:
             continue_input = input("Do you want to continue input [Y/N]?: ").strip().upper()
             if continue_input == "N":
                 break
-# Create a dictionary for the question and add it to the list
 # Save created questions to a text file

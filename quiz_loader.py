@@ -5,4 +5,5 @@ class QuizLoader:
         self.filename = filename
         self.questions = []
 # Load questions from the file into the question list
+    def load_questions(self):
 # Start the quiz with user interaction

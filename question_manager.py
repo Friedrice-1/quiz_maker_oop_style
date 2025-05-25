@@ -44,3 +44,4 @@ class QuestionManager:
             if continue_input == "N":
                 break
 # Save created questions to a text file
+    def save_to_file(self, filename="quiz_data.txt"):

@@ -30,3 +30,4 @@ class QuizLoader:
             else:
                 index += 1
 # Start the quiz with user interaction
+    def start_quiz(self):

@@ -6,8 +6,17 @@ from quiz_loader import QuizLoader
 def menu():
     print("Welcome to the Quiz App")
 # Ask user what they want to do
+    while True:
+        mode = input("Select mode: [1] Create Quiz [2] Take Quiz [Q] Quit: ").strip().upper()
 # Load question manager
+        if mode == "1":
+            print("Create quiz")
 # Load quiz loader
+        elif mode == "2":
+            print("Take the quiz")
+        elif mode == "Q":
+            print("Goodbye")
+            break
 # Check if this file is being run directly
 if __name__ == "__main__":
     menu()

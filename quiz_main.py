@@ -21,6 +21,8 @@ def menu():
         elif mode == "Q":
             print("Goodbye")
             break
+        else:
+            print("Invalid option. Please choose 1, 2 or Q.")
 # Check if this file is being run directly
 if __name__ == "__main__":
     menu()
